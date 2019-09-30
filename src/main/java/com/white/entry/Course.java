@@ -1,5 +1,5 @@
 package com.white.entry;
-
+//未注解
 public class Course {
 
     private int id;
