@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="adminService" class="com.white.service.Impl.AdminServiceImpl"/>
+    <bean id="courseService" class="com.white.service.Impl.CourseServiceImpl"/>
+    <bean id="speakerService" class="com.white.service.Impl.SpeakerServiceImpl"/>
+    <bean id="videoService" class="com.white.service.Impl.VideoServiceImpl"/>
+
+</beans>

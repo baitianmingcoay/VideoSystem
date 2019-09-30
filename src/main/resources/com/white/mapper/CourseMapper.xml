@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.white.mapper.CourseMapper">
+    <resultMap id="videoMap" type="Course">
+        <id property="id" column="id"/>
+        <result property="courseTitle" column="course_title"/>
+        <result property="courseDesc" column="course_desc"/>
+        <result property="subjectId" column="subject_id"/>
+    </resultMap>
+
+    <select id="getCourseList" resultMap="videoMap">
+        select *  from course
+    </select>
+</mapper>

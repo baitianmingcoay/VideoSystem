@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.white.mapper.SpeakerMapper">
+    <resultMap id="videoMap" type="Speaker">
+        <id property="id" column="id"/>
+        <result property="speakerName" column="speaker_name"/>
+        <result property="speakerDesc" column="speaker_desc"/>
+        <result property="speakerJob" column="speaker_job"/>
+        <result property="headImgUrl" column="head_img_url"/>
+    </resultMap>
+
+    <select id="selectAllSpeaker" resultMap="videoMap">
+        select *  from speaker
+    </select>
+
+    <insert id="saveSpeaker"  parameterType="speaker">
+        insert into speaker values (null, #{speakerName}, #{speakerDesc}, #{speakerJob}, #{headImgUrl})
+    </insert>
+</mapper>
